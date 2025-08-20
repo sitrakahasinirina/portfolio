@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Portfolio -- Harilantosoa Jedie Lea</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0614; --card:#120a24; --ink:#f6f4fb; --muted:#cdbef2;
+    --p1:#a78bfa; --p2:#f472b6; --p3:#60a5fa;
+    --grad:conic-gradient(from 200deg at 50% 50%, var(--p2), var(--p1), var(--p3), var(--p2));
+    --r:18px; --shadow:0 24px 60px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box} body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#31186b22,transparent),var(--bg);color:var(--ink);font:16px/1.7 Poppins,system-ui}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:50;background:rgba(10,6,20,.6);backdrop-filter:blur(10px);border-bottom:1px solid #ffffff22}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0}
+  nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+  nav a{padding:.45rem .8rem;border-radius:999px}
+  nav a:is(:hover,.active){background:#ffffff14}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:999px;border:1px solid #ffffff22;background:#ffffff14}
+  .btn.primary{border:0;background:linear-gradient(135deg,var(--p2),var(--p1));color:#1b0f38}
+  .hero{position:relative;overflow:clip;padding:84px 0 44px}
+  .blob{position:absolute;filter:blur(40px);opacity:.45;mix-blend:screen;animation:float 12s ease-in-out infinite alternate}
+  .b1{width:420px;height:420px;background:radial-gradient(circle,var(--p2),transparent 60%);left:-120px;top:-80px}
+  .b2{width:520px;height:520px;background:radial-gradient(circle,var(--p1),transparent 60%);right:-160px;top:-120px;animation-delay:1.5s}
+  .b3{width:360px;height:360px;background:radial-gradient(circle,var(--p3),transparent 60%);right:20%;bottom:-120px;animation-delay:3s}
+  @keyframes float{to{transform:translateY(40px) translateX(20px)}}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+  h1{font-size:clamp(34px,5vw,56px);margin:.2rem 0 1rem}
+  .subtitle{color:var(--muted)}
+  .avatar{aspect-ratio:1/1;border-radius:28px;overflow:hidden;border:2px solid #ffffff33;box-shadow:var(--shadow);position:relative}
+  .ring{position:absolute;inset:-6px;border-radius:36px;padding:6px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite: xor;mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);mask-composite: exclude;}
+  section{padding:60px 0}
+  h2{font-size:clamp(22px,3vw,32px);margin:0 0 14px}
+  .card{background:linear-gradient(180deg,#ffffff08,#ffffff05);border:1px solid #ffffff22;border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .8rem;border-radius:999px;background:#ffffff12;border:1px solid #ffffff22}
+  .skills{display:flex;flex-wrap:wrap;gap:.6rem}
+  .bar{height:10px;border-radius:999px;background:#2a1b4a;border:1px solid #ffffff22;overflow:hidden}
+  .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--p2),var(--p1),var(--p3))}
+  .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .project{border-radius:16px;overflow:hidden;position:relative}
+  .project .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#1c1235,#0d081b)}
+  .project .body{padding:14px;background:#ffffff0e;border:1px solid #ffffff22;border-top:0}
+  .sparkle{position:absolute;inset:0;pointer-events:none;opacity:.0}
+  .project:hover .sparkle{animation:twinkle .8s ease forwards}
+  @keyframes twinkle{to{opacity:.35}}
+  .reveal{opacity:0;transform:translateY(12px);transition:.5s ease}
+  .reveal.on{opacity:1;transform:none}
+  footer{padding:22px 0;border-top:1px solid #ffffff22;color:#cdbef2}
+  @media (max-width:980px){.hero-grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}}
+  @media (max-width:640px){.projects{grid-template-columns:1fr} nav ul{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div style="display:flex;align-items:center;gap:.7rem">
+      <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--p2),var(--p1))"></div>
+      <strong>Harilantosoa Jedie Lea</strong>
+    </div>
+    <nav>
+      <ul>
+        <li><a class="active" href="#accueil">Accueil</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn primary" href="mailto:jhedylea2@gmail.com">Me contacter</a>
+  </div>
+</header>
+<main id="accueil" class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="pill">✨ Développeuse Web & IT</div>
+      <h1 class="type">Hello ! Moi c’est <span style="background:linear-gradient(90deg,var(--p2),var(--p1),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent">Harilantosoa Jedie Lea</span></h1>
+      <p class="subtitle">Créatrice d’expériences web modernes (Laravel, PHP/MySQL, HTML/CSS/JS). J’aime les interfaces propres, les données bien structurées et les animations douces.</p>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem">
+        <a class="btn primary" href="#projets">Voir mes projets</a>
+        <a class="btn" href="#contact">Disponibilité</a>
+      </div>
+    </div>
+    <figure class="avatar reveal">
+      <span class="ring"></span>
+      <img src="photo.jpg" alt="Photo – Harilantosoa Jedie Lea">
+    </figure>
+  </div>
+</main>
+<section>
+  <div class="container grid-2">
+    <article class="card reveal">
+      <h2>À propos</h2>
+      <p>Développeuse web passionnée par les produits utiles et beaux. Je transforme des besoins métier en interfaces fluides, avec une base technique solide : Laravel/PHP, MySQL, intégration accessible et SEO.</p>
+      <div class="grid-2" style="margin-top:12px">
+        <div class="card"><strong>Ville</strong><br/><span style="color:var(--muted)">Antananarivo</span></div>
+        <div class="card"><strong>Langues</strong><br/><span style="color:var(--muted)">Français, Malagasy, Anglais</span></div>
+      </div>
+    </article>
+    <article class="card reveal">
+      <h2>Compétences</h2>
+      <div class="skills" style="margin-bottom:10px">
+        <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
+        <span class="pill">PHP</span><span class="pill">Laravel</span><span class="pill">MySQL</span>
+        <span class="pill">Java</span><span class="pill">Word/Excel/PowerPoint</span>
+      </div>
+      <div>Front-end<div class="bar"><i style="width:88%"></i></div></div>
+      <div style="margin-top:.6rem">Back-end<div class="bar"><i style="width:82%"></i></div></div>
+      <div style="margin-top:.6rem">SEO / Rédaction<div class="bar"><i style="width:76%"></i></div></div>
+    </article>
+  </div>
+</section>
+<section id="projets">
+  <div class="container">
+    <h2 class="reveal">Projets</h2>
+    <div class="projects">
+      <article class="project reveal">
+        <div class="thumb"></div>
+        <canvas class="sparkle"></canvas>
+        <div class="body">
+          <h3>Reporting Interne</h3>
+          <p style="color:var(--muted)">Laravel – tableaux, filtres, export CSV/PDF.</p>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="thumb"></div>
+        <canvas class="sparkle"></canvas>
+        <div class="body">
+          <h3>Application RH locale</h3>
+          <p style="color:var(--muted)">PHP/MySQL – employés, congés, authentification.</p>
+        </div>
+      </article>
+      <article class="project reveal">
+        <div class="thumb"></div>
+        <canvas class="sparkle"></canvas>
+        <div class="body">
+          <h3>Site Agriculture Bio</h3>
+          <p style="color:var(--muted)">HTML/CSS – identité visuelle & pages produits.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="parcours">
+  <div class="container">
+    <h2 class="reveal">Parcours</h2>
+    <div class="grid-2">
+      <div class="card reveal">
+        <strong>Transcriptrice audio</strong> <span style="color:var(--muted)">— Juin–Juil. 2025</span>
+        <p style="color:var(--muted)">Dataplus – transcription, vérification et correction selon les règles.</p>
+      </div>
+      <div class="card reveal">
+        <strong>Stage développeuse web</strong> <span style="color:var(--muted)">— Avr. 2025</span>
+        <p style="color:var(--muted)">SEO, newsletter, optimisation de site et CRUD Laravel.</p>
+      </div>
+      <div class="card reveal">
+        <strong>Licence Info de Gestion</strong> <span style="color:var(--muted)">2021–2024</span>
+        <p style="color:var(--muted)">IS Info Anosizato Andranomena.</p>
+      </div>
+      <div class="card reveal">
+        <strong>CFPF International</strong> <span style="color:var(--muted)">2020–2021</span>
+        <p style="color:var(--muted)">Français, anglais & bureautique.</p>
+      </div>
+      <div class="card reveal">
+        <strong>Baccalauréat A2</strong> <span style="color:var(--muted)">2019–2020</span>
+        <p style="color:var(--muted)">Lycée Ivato Aéroport.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <h2 class="reveal">Contact</h2>
+    <div class="card reveal">
+      <div class="grid-2">
+        <div><strong>Téléphone</strong><br/><span style="color:var(--muted)"><a href="https://wa.me/261324260993" target="_blank">+261324260993</a></span></div>
+        <div><strong>Email</strong><br/><a href="mailto:jhedylea2@gmail.com">jhedylea2@gmail.com</a></div>
+        <div><strong>Adresse</strong><br/><span style="color:var(--muted)">127 MC, Mandrosoa Ivato</span></div>
+        <div><strong>Disponibilité</strong><br/><span style="color:var(--muted)">Immédiate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap">
+    <div>© <span id="year"></span> Harilantosoa Jedie Lea</div>
+    <a id="toTop" class="btn" href="#accueil">↑</a>
+  </div>
+</footer>
+<script>
+  (function(){const el=document.querySelector('.type');const full=el.textContent.trim();el.textContent='';let i=0;const step=()=>{el.textContent=full.slice(0,++i);if(i<full.length) setTimeout(step,26)};step();})();
+  (function(){
+    const els=[...document.querySelectorAll('.reveal')];
+    const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.2});
+    els.forEach(x=>io.observe(x));
+  })();
+  (function(){
+    document.querySelectorAll('.project').forEach(card=>{
+      const c=card.querySelector('.sparkle'); const ctx=c.getContext('2d');
+      function resize(){ c.width=card.clientWidth; c.height=card.clientHeight; }
+      resize(); window.addEventListener('resize',resize);
+      card.addEventListener('mousemove',e=>{
+        const r=card.getBoundingClientRect(), x=e.clientX-r.left, y=e.clientY-r.top;
+        ctx.clearRect(0,0,c.width,c.height);
+        for(let i=0;i<30;i++){
+          const a=Math.random()*Math.PI*2, d=Math.random()*60;
+          const px=x+Math.cos(a)*d, py=y+Math.sin(a)*d;
+          ctx.globalAlpha=1-Math.random()*0.9; ctx.fillStyle='rgba(255,255,255,.9)';
+          ctx.fillRect(px,py,1,1);
+        }
+      });
+      card.addEventListener('mouseleave',()=>ctx.clearRect(0,0,c.width,c.height));
+    });
+  })();
+  (function(){
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const topBtn=document.getElementById('toTop'); window.addEventListener('scroll',()=>{ topBtn.style.display=window.scrollY>600?'inline-flex':'none' });
+  })();
+</script>
+</body>
+</html>
